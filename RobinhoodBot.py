@@ -7,14 +7,14 @@ import time
 #A Simple Robinhood Python Trading Bot using RSI (buy <=30 and sell >=70 RSI) and with support and resistance.
 #Youtube : Jacob Amaral
 # Log in to Robinhood app (will prompt for two-factor)
-rh = Robinhood()
-rh.login(username="username", password="password")
+rh = Robinhood(username="data4ric@gmail.com", password="XzMUMkN99TJ@bI")
+rh.login
 #Setup our variables, we haven't entered a trade yet and our RSI period
-enteredTrade = False
+enteredTrade = True
 rsiPeriod = 5
 #Initiate our scheduler so we can keep checking every minute for new price changes
 s = sched.scheduler(time.time, time.sleep)
-def run(sc): 
+def run(sc):
     global enteredTrade
     global rsiPeriod
     print("Getting historical quotes")
